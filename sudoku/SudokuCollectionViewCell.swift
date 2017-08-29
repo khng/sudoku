@@ -11,6 +11,7 @@ import UIKit
 class SudokuCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var cellView: UIView!
+    @IBOutlet weak var cellLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

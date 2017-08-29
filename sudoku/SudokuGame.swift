@@ -47,25 +47,32 @@ class SudokuGame {
         if let selectedCoordinate = selectedCoordinate {
             let x = selectedCoordinate.x
             let y = selectedCoordinate.y
-            for i in 0...8 {
-                if i != y {
-                    highlightedCoordinates.insert(SudokuCoordinate(x: x, y: UInt(i)))
-                }
-            }
-            for i in 0...8 {
-                if i != x {
-                    highlightedCoordinates.insert(SudokuCoordinate(x: UInt(i), y: y))
-                }
-            }
             
-            let topLeftx = x / 3 * 3
-            let topLefty = y / 3 * 3
+            checkRowAndColumnsFor(x, y)
             
-            for i in topLeftx...topLeftx+2 {
-                for j in topLefty...topLefty+2 {
-                    if i != x && j != y {
-                        highlightedCoordinates.insert(SudokuCoordinate(x: UInt(i), y: UInt(j)))
-                    }
+            checkSectionFor(x, y)
+        }
+    }
+    
+    func checkRowAndColumnsFor(_ x: UInt, _ y: UInt) {
+        for i in 0...8 {
+            if i != y {
+                highlightedCoordinates.insert(SudokuCoordinate(x: x, y: UInt(i)))
+            }
+            if i != x {
+                highlightedCoordinates.insert(SudokuCoordinate(x: UInt(i), y: y))
+            }
+        }
+    }
+    
+    func checkSectionFor(_ x: UInt, _ y: UInt) {
+        let topLeftx = x / 3 * 3
+        let topLefty = y / 3 * 3
+        
+        for i in topLeftx...topLeftx+2 {
+            for j in topLefty...topLefty+2 {
+                if i != x && j != y {
+                    highlightedCoordinates.insert(SudokuCoordinate(x: UInt(i), y: UInt(j)))
                 }
             }
         }

@@ -10,15 +10,15 @@ import UIKit
 
 extension SudokuCoordinate {
     func indexPath() -> IndexPath {
-        let item = x * 9 + y
+        let item = y * 9 + x
         return IndexPath(item: Int(item), section: 0)
     }
 }
 
 extension IndexPath {
     func sudokuCoordinate() -> SudokuCoordinate {
-        let x = item / 9
-        let y = item % 9
+        let x = item % 9
+        let y = item / 9
         return SudokuCoordinate(x:UInt(x), y:UInt(y))
     }
 }
@@ -60,9 +60,9 @@ class SudokuViewController: UIViewController, UICollectionViewDelegate, UICollec
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SudokuCollectionViewCell
         
         if sudokuGame.selectedState(for: indexPath.sudokuCoordinate()) {
-            cell.cellView.backgroundColor = .red
+            cell.cellView.backgroundColor = .darkGray
         } else if sudokuGame.highlightedState(for: indexPath.sudokuCoordinate()) {
-            cell.cellView.backgroundColor = .green
+            cell.cellView.backgroundColor = .lightGray
         } else {
             cell.cellView.backgroundColor = .white
         }

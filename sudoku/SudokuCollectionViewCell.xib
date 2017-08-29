@@ -20,7 +20,21 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQh-TZ-Ak8">
                         <rect key="frame" x="1" y="1" width="48" height="48"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJT-zm-KNV">
+                                <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="KJT-zm-KNV" secondAttribute="bottom" id="612-20-67u"/>
+                            <constraint firstAttribute="trailing" secondItem="KJT-zm-KNV" secondAttribute="trailing" id="9PY-53-CVH"/>
+                            <constraint firstItem="KJT-zm-KNV" firstAttribute="top" secondItem="cQh-TZ-Ak8" secondAttribute="top" id="cix-Ye-wqa"/>
+                            <constraint firstItem="KJT-zm-KNV" firstAttribute="leading" secondItem="cQh-TZ-Ak8" secondAttribute="leading" id="plt-RU-Ulm"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
@@ -33,6 +47,7 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
+                <outlet property="cellLabel" destination="KJT-zm-KNV" id="NNY-eR-1ii"/>
                 <outlet property="cellView" destination="cQh-TZ-Ak8" id="lzR-5R-7dW"/>
             </connections>
         </collectionViewCell>

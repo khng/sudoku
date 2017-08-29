@@ -14,11 +14,11 @@ import Nimble
 class SudokuCoordinateIndexPath: QuickSpec {
     
     override func spec() {
-        it("IndexPath 13, 0 should return coordinate 1, 4") {
-            expect(IndexPath(item: 13, section: 0).sudokuCoordinate()).to(equal(SudokuCoordinate(x:1, y:4)))
+        it("IndexPath 13, 0 should return coordinate 4, 1") {
+            expect(IndexPath(item: 13, section: 0).sudokuCoordinate()).to(equal(SudokuCoordinate(x:4, y:1)))
         }
-        it("Sudoku coordinate 6,8 should return IndexPath 62, 0") {
-            expect(SudokuCoordinate(x:6, y:8).indexPath()).to(equal(IndexPath(item: 62, section: 0)))
+        it("Sudoku coordinate 8,6 should return IndexPath 62, 0") {
+            expect(SudokuCoordinate(x:8, y:6).indexPath()).to(equal(IndexPath(item: 62, section: 0)))
         }
     }
 }
