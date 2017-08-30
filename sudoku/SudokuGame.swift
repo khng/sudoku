@@ -25,13 +25,32 @@ struct SudokuCoordinate: Equatable, Hashable {
     }
 }
 
-class SudokuGame {
+extension SudokuCoordinate {
+    func integer() -> Int {
+        return Int(y) * 9 + Int(x)
+    }
+}
 
+extension Int {
+    func sudokuCoordinate() -> SudokuCoordinate {
+        let x = self % 9
+        let y = self / 9
+        return SudokuCoordinate(x:UInt(x), y:UInt(y))
+    }
+}
+
+class SudokuGame {
+    
+    let board: [Int?] = [nil,nil,nil,2,nil,4,8,1,nil,nil,4,nil,nil,nil,8,2,6,3,3,nil,nil,1,6,nil,nil,nil,4,1,nil,nil,nil,4,nil,5,8,nil,6,3,5,8,2,nil,nil,nil,7,2,nil,nil,5,9,nil,1,nil,nil,9,1,nil,7,nil,nil,nil,4,nil,nil,nil,nil,6,8,nil,7,nil,1,8,nil,nil,4,nil,3,nil,5,nil]
+    
+    let boardConstraints = SudokuBoardConstraints()
+    
     var selectedCoordinate: SudokuCoordinate? {
         didSet {
             updateGame()
         }
     }
+    
     var highlightedCoordinates: Set<SudokuCoordinate> = []
     
     func selectedState(for coordinate: SudokuCoordinate) -> Bool {
@@ -48,33 +67,8 @@ class SudokuGame {
             let x = selectedCoordinate.x
             let y = selectedCoordinate.y
             
-            checkRowAndColumnsFor(x, y)
-            
-            checkSectionFor(x, y)
+            highlightedCoordinates = Set(boardConstraints.affectedCoordinates(x, y))
         }
     }
     
-    func checkRowAndColumnsFor(_ x: UInt, _ y: UInt) {
-        for i in 0...8 {
-            if i != y {
-                highlightedCoordinates.insert(SudokuCoordinate(x: x, y: UInt(i)))
-            }
-            if i != x {
-                highlightedCoordinates.insert(SudokuCoordinate(x: UInt(i), y: y))
-            }
-        }
-    }
-    
-    func checkSectionFor(_ x: UInt, _ y: UInt) {
-        let topLeftx = x / 3 * 3
-        let topLefty = y / 3 * 3
-        
-        for i in topLeftx...topLeftx+2 {
-            for j in topLefty...topLefty+2 {
-                if i != x && j != y {
-                    highlightedCoordinates.insert(SudokuCoordinate(x: UInt(i), y: UInt(j)))
-                }
-            }
-        }
-    }
 }

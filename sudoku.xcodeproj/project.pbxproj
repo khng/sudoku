@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE3240F01F550458002F292C /* SudokuCellConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3240EF1F550458002F292C /* SudokuCellConstraints.swift */; };
 		AE477AA31F4BC4E500BD81A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE477AA21F4BC4E500BD81A9 /* AppDelegate.swift */; };
 		AE477AAA1F4BC4E500BD81A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE477AA91F4BC4E500BD81A9 /* Assets.xcassets */; };
 		AE477AAD1F4BC4E500BD81A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE477AAB1F4BC4E500BD81A9 /* LaunchScreen.storyboard */; };
@@ -19,6 +20,7 @@
 		AEC60E451F5353C500941729 /* SudokuGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC60E441F5353C500941729 /* SudokuGame.swift */; };
 		AEC60E471F53588A00941729 /* SudokuGameSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC60E461F53588A00941729 /* SudokuGameSpec.swift */; };
 		AEC60E491F536D0500941729 /* SudokuCoordinateIndexPathSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC60E481F536D0500941729 /* SudokuCoordinateIndexPathSpec.swift */; };
+		AEEBEDCD1F565AAF00F73CB8 /* SudokuBoardConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEBEDCC1F565AAF00F73CB8 /* SudokuBoardConstraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE3240EF1F550458002F292C /* SudokuCellConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuCellConstraints.swift; sourceTree = "<group>"; };
 		AE477A9F1F4BC4E500BD81A9 /* sudoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sudoku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE477AA21F4BC4E500BD81A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE477AA91F4BC4E500BD81A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,6 +51,7 @@
 		AEC60E441F5353C500941729 /* SudokuGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuGame.swift; sourceTree = "<group>"; };
 		AEC60E461F53588A00941729 /* SudokuGameSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuGameSpec.swift; sourceTree = "<group>"; };
 		AEC60E481F536D0500941729 /* SudokuCoordinateIndexPathSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuCoordinateIndexPathSpec.swift; sourceTree = "<group>"; };
+		AEEBEDCC1F565AAF00F73CB8 /* SudokuBoardConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuBoardConstraints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 				AE62D2EB1F4D15F2007032C2 /* SudokuCollectionViewCell.swift */,
 				AE62D2EC1F4D15F2007032C2 /* SudokuCollectionViewCell.xib */,
 				AEC60E441F5353C500941729 /* SudokuGame.swift */,
+				AE3240EF1F550458002F292C /* SudokuCellConstraints.swift */,
+				AEEBEDCC1F565AAF00F73CB8 /* SudokuBoardConstraints.swift */,
 				AE477AA91F4BC4E500BD81A9 /* Assets.xcassets */,
 				AE477AAB1F4BC4E500BD81A9 /* LaunchScreen.storyboard */,
 				AE477AAE1F4BC4E500BD81A9 /* Info.plist */,
@@ -249,7 +255,9 @@
 			files = (
 				AEC60E451F5353C500941729 /* SudokuGame.swift in Sources */,
 				AE477AA31F4BC4E500BD81A9 /* AppDelegate.swift in Sources */,
+				AEEBEDCD1F565AAF00F73CB8 /* SudokuBoardConstraints.swift in Sources */,
 				AE62D2ED1F4D15F2007032C2 /* SudokuCollectionViewCell.swift in Sources */,
+				AE3240F01F550458002F292C /* SudokuCellConstraints.swift in Sources */,
 				AE477AC41F4BCB7800BD81A9 /* SudokuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

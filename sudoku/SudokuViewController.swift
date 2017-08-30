@@ -67,6 +67,17 @@ class SudokuViewController: UIViewController, UICollectionViewDelegate, UICollec
             cell.cellView.backgroundColor = .white
         }
         
+        if let setNumbers = sudokuGame.board[indexPath.row] {
+            cell.cellLabel.text = String(setNumbers)
+            cell.cellLabel.textColor = .white
+            cell.cellLabel.font = UIFont.boldSystemFont(ofSize: 23)
+            cell.cellView.backgroundColor = UIColor(red: 65/255, green: 126/255, blue: 224/255, alpha: 1)
+            cell.isUserInteractionEnabled = false
+        } else {
+            cell.cellLabel.text = ""
+            cell.isUserInteractionEnabled = true
+        }
+        
         return cell
     }
     
