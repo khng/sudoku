@@ -100,4 +100,9 @@ class SudokuViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         collectionView.reloadItems(at: Array(Set(indexPathsToReload)))
     }
+    
+    @IBAction func didTapSolve(_ sender: Any) {
+        sudokuGame.weedOut()
+        collectionView.reloadData()
+    }
 }

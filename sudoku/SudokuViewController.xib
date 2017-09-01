@@ -30,12 +30,22 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8e-uX-SKM">
+                    <rect key="frame" x="164" y="442" width="46" height="30"/>
+                    <state key="normal" title="Solve"/>
+                    <connections>
+                        <action selector="didTapSolve:" destination="-1" eventType="touchUpInside" id="SQ1-u6-jkd"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="V8e-uX-SKM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="164" id="BAI-Gb-Gyo"/>
                 <constraint firstItem="Sjm-zK-HkG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="DjQ-wf-shr"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Sjm-zK-HkG" secondAttribute="trailing" id="Hwc-0I-kRP"/>
                 <constraint firstItem="Sjm-zK-HkG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="K6p-Fn-sE9"/>
+                <constraint firstItem="V8e-uX-SKM" firstAttribute="top" secondItem="Sjm-zK-HkG" secondAttribute="bottom" constant="22" id="Qtn-5P-CRi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="V8e-uX-SKM" secondAttribute="trailing" constant="165" id="Y0a-Ub-dtz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Sjm-zK-HkG" secondAttribute="bottom" constant="247" id="hS6-tW-8xa"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
