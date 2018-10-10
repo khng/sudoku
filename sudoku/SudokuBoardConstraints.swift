@@ -53,9 +53,11 @@ class SudokuBoardConstraints {
         
         for i in topLeftx...topLeftx+2 {
             for j in topLefty...topLefty+2 {
-                if i != x && j != y {
+//                if i != x && j != y {
+                if !(i == x && j == y) {
                     arrayToReturn.append(SudokuCoordinate(x: UInt(i), y: UInt(j)))
                 }
+//                }
             }
         }
         
@@ -68,4 +70,5 @@ class SudokuBoardConstraints {
         
         return Array(Set(affectedSections))
     }
+    
 }
